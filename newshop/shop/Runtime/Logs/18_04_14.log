@@ -1,0 +1,20 @@
+[ 2018-04-14T19:56:13+08:00 ] 0.0.0.0 /newshop/shop/index.php/Home/User/register
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.008663s ]
+INFO: [ route_check ] --END-- [ RunTime:0.008796s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\Wamp\www\newshop\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.013527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013648s ]
+ERR: 无法加载模块:Home
+
+[ 2018-04-14T19:56:15+08:00 ] 0.0.0.0 /newshop/shop/index.php/Home/User/register
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000923s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001063s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead C:\Wamp\www\newshop\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+ERR: 无法加载模块:Home
+

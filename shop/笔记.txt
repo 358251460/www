@@ -1,0 +1,45 @@
+common 存放当前项目的公共函数
+conf   存放当前项目的配置文件
+Lang  存放当前项目的语言包
+lib  存放当前项目的控制器和模型
+Runtim 存放当前项目的运行时的文件
+TPI  存放当前项目的模板文件
+
+
+eq =     neq!=   gr >    egt =>      elt <=   hep===   nep!==
+
+1、PDO::query
+PDO::query执行一条SQL语句，如果通过，则返回一个PDOStatement对象。PDO::query函数有个“非常好处”，就是可以直接遍历这个返回的记录集。
+示例如下：
+$sql = 'SELECT name FROM url';
+foreach ($dbh->query($sql) as $row) {
+    print $row['name'] . "\t";
+}
+query同传统的mysql query函数类似，同样需要对开发者自行对输入的sql语句进行安全检查。
+query因为会返回PDOStament对象，似乎用在SELECT语句执行上更合适，这跟上文提到的query支持直接遍历不谋而合。
+query执行后，在下一次query执行之前，如果不取走所有返回的记录集，则query将会执行失败，除非我们调用 PDOStatement::closeCursor()来释放数据库资源与PDOStatement对象。
+
+二、PDO::exec
+PDO::exec执行一条SQL语句，并返回受影响的行数。此函数不会返回结果集合。官方建议：
+对于在程序中只需要发出一次的 SELECT 语句，可以考虑使用 PDO::query()。
+对于需要发出多次的语句，可用 PDO::prepare() 来准备一个 PDOStatement 对象并用 PDOStatement::execute() 发出语句。
+PDO::exec支持SELECT/DELETE/UPDATE/INSERT等全部SQL语句执行，所以相比PDO query()函数功能要强大的多。由于只返回受影响的函数，
+所以，如果执行SELECT则无法得到PDOStatement对象，故也无法遍历结果集，只能按照官方建议去使用query或execute函数。
+
+当执行insert update delete 等没有结果集的查询时 用PDO对象中的exec()方法执行
+$temp = $dbh->exec($sql);
+返回值表示表中受影响的行数
+
+$arr  = array(11.12,66);
+$sql ="select * from 学号 where 姓名=？"
+$result = $pdo->prepare($sql);//对该sql语句进行“预处理”，有利于提高速度
+foreach($arr as $value)
+{
+ 	 $result->bindValue(1,$value)//给$result中的第一个问号的值赋值为$value
+         $result->execute();//执行改sql语句，则此时就得到了结果集了，就处理了 
+         
+         $rec= $result->ffrtch(PDO::FETCH_ASSOC);  
+        echo "<br/>";
+        print_r($rec);     
+}
+

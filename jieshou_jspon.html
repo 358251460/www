@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+
+     function  get_weather() {
+
+         var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function()
+            {
+                if (xhr.readyState==4)
+                {
+                    eval("var jn_info="+xhr.responseText)
+                    console.log(jn_info)
+
+                }
+            }
+            xhr.open('get','./jspon1.php')
+            xhr.send(null)
+     }
+    </script>
+</head>
+<body>
+<h2>、处理jspon信息</h2>
+<input type="button" value="获得天气" onclick="get_weather()">
+</body>
+</html>

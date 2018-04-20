@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+function 	checkname()
+{
+	//ajav用户名校验
+	var nm = document.getElementById('usename').value;
+	var xhr = new XMLHttpRequest();
+	//对传递的特殊符号进行边贸处理 
+	nm = encodeURIComponent(nm);
+	xhr.onreadystatechange = function()
+	{
+		alert(xhr.responseText);
+	}
+	xhr.open('GET','./04.php?name = '+nm);
+	xhr.send(null);
+}
+</script>
+</head>
+
+<body>
+<h2>ajax之用户的校验请求</h2>
+<p>用户：<input type="text" id="usename"  onblur="checkname()"/></p>
+<p>手机号码：<input type="text" id="usertel" /></p>
+</body>
+</html>

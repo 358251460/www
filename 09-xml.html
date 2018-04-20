@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<script type="text/javascript">
+  function f1 ()
+  {
+	  var xhr = new XMLHttpRequest();
+	  xhr.onreadystatechange = function()
+	  {
+		  if(xhr.readyState==4)
+		  {
+			
+			//  alert(xhr.responseXML);
+		    var xmldom = xhr.responseXML;
+//			console.log(xmldom.firstChild);
+			var yuang = xmldom.getElementsByTagName('职工');
+			//console.log(yuang)//HTMLCollection [ 职工, 职工 ]
+			for(var k in  yuang[1])
+			{
+				console.log(k);
+			}
+		  }
+	  }
+	  xhr.open('get','./p4.xml');
+	  xhr.send(null);
+  }
+</script>
+<body>
+<h2>ajax + js 实现对x'm'l 的接受和处理</h2>
+<input type="button" value="触发" onclick="f1()" />
+</body>
+</html>

@@ -1,0 +1,48 @@
+[ 2018-04-03T14:30:25+08:00 ] ::1 /newshop/shop/index.php/Index/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011139s ]
+ERR: 无法加载模块:Index
+
+[ 2018-04-03T14:31:45+08:00 ] ::1 /newshop/shop/index.php/Index/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+ERR: 无法加载模块:Index
+
+[ 2018-04-03T14:32:04+08:00 ] ::1 /newshop/shop/index.php/Good/showlost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+ERR: 无法加载模块:Good
+
+[ 2018-04-03T14:37:37+08:00 ] ::1 /newshop/shop/Index/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+ERR: 无法加载模块:User
+
+[ 2018-04-03T14:46:47+08:00 ] ::1 /newshop/shop/index.php/Index/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+ERR: 无法加载模块:Index
+
+[ 2018-04-03T14:46:53+08:00 ] ::1 /newshop/shop/index.php/Good/showlost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+ERR: 无法加载模块:Good
+
+[ 2018-04-03T14:48:09+08:00 ] ::1 /newshop/shop/index.php/Index/HomeUser/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+ERR: 无法加载模块:Index
+
+[ 2018-04-03T14:48:20+08:00 ] ::1 /newshop/shop/index.php/Index/Home/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+ERR: 无法加载模块:Index
+

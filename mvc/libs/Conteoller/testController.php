@@ -12,7 +12,7 @@ class  testController
     {
         $testMdel = new  testModel();
         $data = $testMdel->get();
-        $testView = new testView();
+             $testView = new testView();
         $testView->display($data);
 
 
